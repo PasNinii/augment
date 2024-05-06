@@ -1,0 +1,22 @@
+{
+  "dimensions": [
+    {
+      "name": "source",
+      "label": "Source",
+      "value": "",
+      "type": "text",
+      "validators": {
+        "required": true
+      }
+    },
+    {
+      "name": "fact",
+      "label": "Fait",
+      "value": "",
+      "type": "text",
+      "validators": {
+        "required": true
+      }
+    }
+  ]
+}

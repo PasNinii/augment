@@ -1,0 +1,22 @@
+{
+  "dimensions": [
+    {
+      "name": "word",
+      "label": "Mot",
+      "value": "",
+      "type": "text",
+      "validators": {
+        "required": true
+      }
+    },
+    {
+      "name": "definition",
+      "label": "Définition",
+      "value": "",
+      "type": "text",
+      "validators": {
+        "required": true
+      }
+    }
+  ]
+}
