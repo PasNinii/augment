@@ -1,4 +1,3 @@
-sudo npm install -g @ionic/cli
-sudo npm install -g @angular/cli
+current_path=$(pwd)
 
-cp /workspaces/augment/augment/src/environments/.environment.ini /workspaces/augment/augment/src/environments/environment.json
+cp $current_path/src/environments/.environment.ini $current_path/src/environments/environment.json
