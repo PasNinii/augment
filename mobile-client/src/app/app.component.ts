@@ -14,7 +14,6 @@ export class AppComponent {
   private readonly digestService = inject(DigestService);
 
   constructor() {
-    console.log('app init');
     this.digestService.load();
   }
 }
