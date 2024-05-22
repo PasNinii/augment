@@ -86,7 +86,7 @@ export class DigestService {
       HAVING
         COUNT(dh.id) = 0
       OR
-        MAX(dh.vtime) < NOW() - INTERVAL '1 WEEK' * COUNT(dh.id)
+        MAX(dh.vtime) < NOW() - INTERVAL '1 DAY' * COUNT(dh.id)
       ORDER BY
         d.id DESC
     `;
