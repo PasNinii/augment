@@ -1,43 +1,64 @@
 name: Bug Report
-description: File a bug report.
-title: "[Bug]: "
-labels: ["bug", "triage"]
-projects: ["octo-org/1", "octo-org/44"]
-assignees:
-  - octocat
+description: Report a bug in app
+title: 'bug(COMPONENT): TITLE'
+labels: ['needs triage']
 body:
-  - type: markdown
+  - type: checkboxes
+    id: is-regression
     attributes:
-      value: |
-        Thanks for taking the time to fill out this bug report!
+      label: Is this a regression?
+      description: Did this behavior use to work in the previous version?
+      options:
+        - label: Yes, this behavior used to work in the previous version
   - type: input
-    id: contact
+    id: version-bug-was-not-present
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
+      label: The previous version in which this bug was not present was
     validations:
       required: false
   - type: textarea
-    id: what-happened
+    id: description
     attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      label: Description
+      description: A clear and concise description of the problem.
     validations:
       required: true
-  - type: dropdown
-    id: version
+  - type: textarea
+    id: reproduction
     attributes:
-      label: Version
-      description: What version of our software are you running?
-      options:
-        - Pearl (design system)
-        - Navigation
-        - Map
-        - Dashboard
-      default: 0
+      label: Reproduction
+      description: |
+        Step of reproduction
+      value: |
+        go to google.com
+        1. search 
+        2. nav back
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: What behavior were you expecting to see?
+    validations:
+      required: true
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual Behavior
+      description: What behavior did you actually see?
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Part of app
+      description: 
+      value: |
+        - Filtering:
+        - Page:
+        - Design system:
+        - Operating System (e.g. Windows, macOS, Ubuntu):
     validations:
       required: true
   - type: dropdown
@@ -50,9 +71,3 @@ body:
         - Chrome
         - Safari
         - Microsoft Edge
-  - type: textarea
-    id: logs
-    attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
