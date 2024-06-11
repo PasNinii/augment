@@ -49,18 +49,16 @@ body:
       description: What behavior did you actually see?
     validations:
       required: true
-  - type: textarea
-    id: environment
+  - type: dropdown
+    id: browsers
     attributes:
-      label: Part of app
-      description: 
-      value: |
-        - Filtering:
-        - Page:
-        - Design system:
-        - Operating System (e.g. Windows, macOS, Ubuntu):
-    validations:
-      required: true
+      label: What browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
   - type: dropdown
     id: browsers
     attributes:
