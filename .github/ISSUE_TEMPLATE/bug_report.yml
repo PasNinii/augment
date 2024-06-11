@@ -60,12 +60,11 @@ body:
         - Safari
         - Microsoft Edge
   - type: dropdown
-    id: browsers
+    id: component
     attributes:
-      label: What browsers are you seeing the problem on?
+      label: Which part
       multiple: true
       options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
+        - Filtering
+        - Navigation
+        - Design system
