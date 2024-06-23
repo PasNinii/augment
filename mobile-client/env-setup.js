@@ -7,7 +7,7 @@ exec('ls', (error, stdout, stderr) => {
     console.error(`exec error: ${error}`);
     return;
   }
-  console.log(`stdout: ${stdout}`);
+  console.log(`stdout ls: ${stdout}`);
   if (stderr) {
     console.error(`stderr: ${stderr}`);
   }
@@ -18,7 +18,7 @@ exec('pwd', (error, stdout, stderr) => {
     console.error(`exec error: ${error}`);
     return;
   }
-  console.log(`stdout: ${stdout}`);
+  console.log(`stdout pwd: ${stdout}`);
   if (stderr) {
     console.error(`stderr: ${stderr}`);
   }
@@ -26,7 +26,7 @@ exec('pwd', (error, stdout, stderr) => {
 
 exec('echo $ANGULAR_OUTPUT_PATH', (error, stdout, stderr) => {
   if (error) {
-    console.error(`exec error: ${error}`);
+    console.error(`exec error echo: ${error}`);
     return;
   }
   console.log(`stdout: ${stdout}`);
