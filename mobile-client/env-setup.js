@@ -8,6 +8,8 @@ const writeJsonFile = (name = 'environment.json') => {
     audience: process.env.AUDIENCE,
   };
 
+  console.log(ENVIRONMENT_VARIABLES);
+
   fs.writeFile(
     path.join(`${__dirname}/src/environments/${name}`),
     JSON.stringify(ENVIRONMENT_VARIABLES),
