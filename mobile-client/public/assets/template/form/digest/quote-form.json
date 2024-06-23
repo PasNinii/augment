@@ -1,0 +1,22 @@
+{
+  "dimensions": [
+    {
+      "name": "quote",
+      "label": "Citation",
+      "value": "",
+      "type": "textarea",
+      "validators": {
+        "required": true
+      }
+    },
+    {
+      "name": "author",
+      "label": "Auteur",
+      "value": "",
+      "type": "text",
+      "validators": {
+        "required": true
+      }
+    }
+  ]
+}
