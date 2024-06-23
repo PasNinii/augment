@@ -13,15 +13,23 @@ exec('ls', (error, stdout, stderr) => {
   }
 });
 
+exec('echo $ANGULAR_OUTPUT_PATH', (error, stdout, stderr) => {
+  if (error) {
+    console.error(`exec error: ${error}`);
+    return;
+  }
+  console.log(`stdout: ${stdout}`);
+  if (stderr) {
+    console.error(`stderr: ${stderr}`);
+  }
+});
+
 const writeJsonFile = (name = 'environment.json') => {
   const ENVIRONMENT_VARIABLES = {
     domain: process.env.DOMAIN,
     clientId: process.env.CLIENT_ID,
     audience: process.env.AUDIENCE,
   };
-
-  console.log(__dirname);
-  console.log(ENVIRONMENT_VARIABLES);
 
   fs.writeFile(
     path.join(`${__dirname}/src/environments/${name}`),
